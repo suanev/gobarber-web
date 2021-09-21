@@ -13,6 +13,9 @@
     "@unform/core": "^2.1.0",
     "@unform/web": "^2.1.0",
     "axios": "^0.19.2",
+    "cypress": "^8.4.1",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-webpack-preprocessor-v5": "^5.0.0-alpha.1",
     "date-fns": "^2.14.0",
     "polished": "^3.5.2",
     "react": "^16.13.1",
@@ -22,6 +25,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-spring": "^8.0.27",
+    "selenium-webdriver": "^4.0.0-rc-1",
     "styled-components": "^5.1.0",
     "typescript": "~3.7.2",
     "uuidv4": "^6.0.7",
@@ -31,6 +35,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:chrome": "cypress run --browser chrome --no-exit",
     "test:coverage": "react-scripts test --coverage --watchAll false",
     "eject": "react-scripts eject"
   },
@@ -67,6 +72,7 @@
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "axios-mock-adapter": "^1.18.1",
+    "chromedriver": "^93.0.1",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "3.2.0",
     "eslint": "^6.8.0",
@@ -87,5 +93,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
   }
 }
